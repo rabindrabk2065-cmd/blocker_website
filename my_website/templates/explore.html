@@ -1,0 +1,460 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/explore.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!--================ NAVBAR START ================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="{% url 'home' %}">
+
+                    Rabindra<span>.</span>
+
+                </a>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="{% url 'home' %}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#about">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#projects">
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'note' %}" class="active">
+
+                        Notes
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#news">
+
+                        News
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!--<a href="{% url 'home' %}#contact" class="btn">
+
+                Hire Me
+
+            </a>-->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--================ NAVBAR END ================-->
+    <!--==============================
+    SEMESTER SECTION START
+================================-->
+
+    <section class="semester-section" id="computer">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Computer Engineering</span>
+
+                <h2>Select Your Semester</h2>
+
+                <p>
+                    Choose your semester to access notes,
+                    lab reports, practical files, old questions
+                    and learning resources.
+                </p>
+
+            </div>
+
+            <div class="semester-grid">
+
+                <div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                        <div class="card-front">
+
+                            <div class="semester-number">01</div>
+
+                            <h3>Semester I</h3>
+
+                            <p>
+                                Programming Fundamentals,
+                                Mathematics,
+                                Digital Logic
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Back -->
+                        <div class="card-back">
+
+                            <h3>Semester I Subjects</h3>
+
+                            <ul>
+                                <li>Engineering Mathematics I</li>
+                                <li>Nepali </li>
+                                <li>english</li>
+                                <li>Computer Fundamentals</li>
+                                <li>chemistry I</li>
+                                <li>Engineering Physics I </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Semester 2 -->
+
+
+                <div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                        <div class="card-front">
+
+                            <div class="semester-number">02</div>
+
+                            <h3>Semester II</h3>
+
+                            <p>
+                                sem 2 ko note
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Back -->
+                        <div class="card-back">
+
+                            <h3>Semester II Subjects</h3>
+
+                            <ul>
+                                <li>Eg Mathematics II</li>
+                                <li>Eg Physics II</li>
+                                <li>er chemistry II</li>
+                                <li>applied machines</li>
+                                <li>er drawing II</li>
+                                <li> </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Semester 3 -->
+
+
+                <div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                        <div class="card-front">
+
+                            <div class="semester-number">03</div>
+
+                            <h3>Semester III</h3>
+
+                            <p>
+                                Programming Fundamentals,
+                                Mathematics,
+                                Digital Logic
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Back -->
+                        <div class="card-back">
+
+                            <h3>Semester III Subjects</h3>
+
+                            <ul>
+                                <li><a href="{% url 'mathIII' %}">Engineering Mathematics III</a></li>
+                                <li><a href="#">Programming in C</a></li>
+                                <li>Digital Logic</li>
+                                <li>Web Techlology I</li>
+                                <li>Descrete structure</li>
+                                <li>basic electrinic and electrical er</li>
+                                <li>Software Engineering</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Semester 4 -->
+
+
+                <div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                        <div class="card-front">
+
+                            <div class="semester-number">04</div>
+
+                            <h3>Semester IV</h3>
+
+                            <p>
+                                Programming Fundamentals,
+                                Mathematics,
+
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Back -->
+                        <div class="card-back">
+
+                            <h3>Semester IV Subjects</h3>
+
+                            <ul>
+                                <li><a href="#">probality and statistics</a></li>
+                                <li><a href="{% url 'java' %}">Programming in java (OOP)</a></li>
+                                <li>DSA</li>
+                                <li>DBMS</li>
+                                <li><a href="{% url 'web' %}">Web Techlology II</a></li>
+                                <li><a href="{% url 'microprocessor' %}">microprocessor and computer Architecture</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Semester 5 -->
+
+
+                <div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                        <div class="card-front">
+
+                            <div class="semester-number">05</div>
+
+                            <h3>Semester V </h3>
+
+                            <p>
+
+                                comming soon
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Back -->
+                        <div class="card-back">
+
+                            <h3>Semester VI Subjects</h3>
+
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Semester 6 -->
+
+
+                <!-- <div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                <!--<div class="card-front">
+
+                            <div class="semester-number">01</div>
+
+                            <h3>Semester VI</h3>
+
+                            <p>
+                                project I
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Back -->
+                <!--<div class="card-back">
+
+                            <h3>Semester I Subjects</h3>
+
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Semester 8 -->
+
+
+                <!--<div class="semester-card">
+
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                <!--<div class="card-front">
+
+                            <div class="semester-number">01</div>
+
+                            <h3>Semester I</h3>
+
+                            <p>
+                                Programming Fundamentals,
+                                Mathematics,
+                                Digital Logic
+                            </p>
+
+                            <a href="#" class="semester-btn">
+                                Open Notes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>-->
+
+                <!-- Back -->
+                <!--<div class="card-back">
+
+                            <h3>Semester I Subjects</h3>
+
+                            <ul>
+                                <li>Engineering Mathematics I</li>
+                                <li>Programming in C</li>
+                                <li>Digital Logic</li>
+                                <li>Computer Fundamentals</li>
+                                <li>Communication English</li>
+                                <li>Engineering Physics</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            -->
+
+                <!--==============================
+    SEMESTER SECTION END
+================================-->

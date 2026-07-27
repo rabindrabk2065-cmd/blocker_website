@@ -1,0 +1,278 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blogs | Rabindra</title>
+
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!--==================== NAVBAR START ====================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="{% url 'home' %}">Rabindra.</a>
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="{% url 'home' %}">Home</a></li>
+
+                <li><a href="{% url 'home' %}#about">About</a></li>
+
+                <li><a href="{% url 'home' %}#project">Projects</a></li>
+
+                <li><a href="{% url 'note' %}">Notes</a></li>
+
+                <li><a href="{% url 'blog' %}" class="active">Blog</a></li>
+
+                <li><a href="{% url 'home' %}#contact">Contact</a></li>
+                <li><a href="{% url 'login' %}">login</a></li>
+
+            </ul>
+
+            <a href="{% url 'home' %}#contact" class="btn" id="Home">Hire Me</a>
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--==================== NAVBAR END ====================-->
+
+
+    <!-- ================= BLOG HERO ================= -->
+
+    <section class="blog-section" id="blog">
+
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+
+        <div class="blog-heading">
+
+            <span>MY BLOG</span>
+
+            <h2>Articles & Tutorials</h2>
+
+            <p>
+                Explore my latest programming tutorials, web development tips,
+                coding journey, and personal experiences.
+            </p>
+
+        </div>
+
+        <div class="blog-search">
+
+            <input type="text" id="searchBlog" placeholder="Search articles...">
+
+            <button>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURED BLOG ================= -->
+
+    {% if featured_blog %}
+
+    <section class="featured-blog">
+
+        <div class="featured-left">
+
+            <img src="{{ featured_blog.image.url }}" alt="{{ featured_blog.title }}">
+
+        </div>
+
+        <div class="featured-right">
+
+            <span class="featured-tag">
+
+                {{ featured_blog.category }}
+
+            </span>
+
+            <h2>
+
+                {{ featured_blog.title }}
+
+            </h2>
+
+            <p>
+
+                {{ featured_blog.short_description }}
+
+            </p>
+
+            <div class="featured-meta">
+
+                <span>
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    {{ featured_blog.created_at|date:"M d, Y" }}
+
+                </span>
+
+                <a href="#" class="featured-btn">
+
+                    Read More
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% endif %}
+
+    <!-- ================= LATEST BLOGS ================= -->
+
+    <section class="latest-blogs">
+
+        <div class="section-title">
+
+            <span>Latest Articles</span>
+
+            <h2>Recent Blog Posts</h2>
+
+        </div>
+
+        <div class="blog-grid">
+
+            {% for blog in blogs %}
+
+            <article class="blog-card">
+
+                <div class="blog-image">
+
+                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+
+                </div>
+
+                <div class="blog-body">
+
+                    <span class="category">
+
+                        {{ blog.category }}
+
+                    </span>
+
+                    <h3>
+
+                        {{ blog.title }}
+
+                    </h3>
+
+                    <p>
+
+                        {{ blog.short_description|truncatewords:18 }}
+
+                    </p>
+
+                    <div class="blog-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            {{ blog.created_at|date:"M d, Y" }}
+
+                        </span>
+
+                        <a href="#">
+
+                            Read More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            {% empty %}
+
+            <h2>No Blogs Available</h2>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="blog-cta">
+
+        <div class="cta-content">
+
+            <span>Let's Work Together</span>
+
+            <h2>Have a Project in Mind?</h2>
+
+            <p>
+                Need a modern website or web application?
+                Let's build something amazing together.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="{% url 'home' %}#contact" class="primary-btn">
+
+                    Contact Me
+
+                </a>
+
+                <a href="{% url 'home' %}#project" class="secondary-btn">
+
+                    View Projects
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="{% static 'js/blog.js' %}"></script>
+
+</body>
+
+</html>

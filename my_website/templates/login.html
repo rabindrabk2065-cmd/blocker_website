@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Rabindra Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="login-container">
+
+        <div class="login-left">
+
+            <div class="logo">
+                <i class="fa-solid fa-code"></i>
+                <h2>Rabindra.</h2>
+            </div>
+
+            <h1>Welcome Back 👋</h1>
+
+            <p>
+                Login to access your personal dashboard, projects,
+                blogs, notes and portfolio management.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Secure Login
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Personal Dashboard
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Manage Projects
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Fast & Responsive
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="login-right">
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <h2>Login</h2>
+
+                <p class="subtitle">
+                    Sign in to continue
+                </p>
+
+                {% if error %}
+                <div class="error">
+                    {{ error }}
+                </div>
+                {% endif %}
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input type="text" name="username" placeholder="Username" required>
+
+                </div>
+
+                <div class="input-box password-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+
+                    <span id="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+
+                </div>
+
+                <div class="options">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+
+                    Login
+
+                </button>
+
+                <div class="divider">
+
+                    <span>OR</span>
+
+                </div>
+
+                <div class="social-login">
+
+                    <a href="#">
+                        <i class="fab fa-google"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+                <p class="register">
+
+                    Don't have an account?
+
+                    <a href="#">Register</a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/login.js' %}"></script>
+
+</body>
+
+</html>

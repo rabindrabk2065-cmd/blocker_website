@@ -1,0 +1,505 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard | Rabindra</title>
+
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="{% url 'home' %}">
+
+                    Rabindra<span>.</span>
+
+                </a>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="{% url 'home' %}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#about">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#projects">
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'note' %}" class="">
+
+                        Notes
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'blog' %}">
+
+                        Blog
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!--<a href="{% url 'home' %}#contact" class="btn">
+
+                Hire Me
+
+            </a>-->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--================ NAVBAR END ================-->
+
+    <!-- =========================
+        SIDEBAR
+========================== -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h2>Rabindra.</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+
+                <a href="#">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>My Profile</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>Projects</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-newspaper"></i>
+
+                    <span>Blogs</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <span>Notes</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>Messages</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="{% url 'logout' %}">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- =========================
+        MAIN CONTENT
+========================== -->
+
+    <div class="main-content">
+
+        <!-- HEADER -->
+
+        <div class="dashboard-header">
+
+            <div class="welcome">
+
+                <h1>
+
+                    Welcome,
+                    {{ request.user.first_name|default:request.user.username }}
+
+                    👋
+
+                </h1>
+
+                <p>
+
+                    Manage your account from one place.
+
+                </p>
+
+            </div>
+
+            <div class="profile-box">
+
+                <img src="{% static 'image\rann.jpg' %}" alt="Profile">
+
+            </div>
+
+        </div>
+
+        <!-- HERO CARD -->
+
+        <section class="hero-card">
+
+            <div>
+
+                <h2>Personal Dashboard</h2>
+
+                <p>
+
+                    Welcome back! Here you can manage your
+                    profile, projects, blogs, notes and messages.
+
+                </p>
+
+                <a href="#" class="btn">
+
+                    Edit Profile
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- STATISTICS -->
+
+        <section class="statistics">
+
+            <div class="card">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h2>{{ project_count }}</h2>
+
+                <p>Projects</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-book"></i>
+
+                <h2>{{ note_count }}</h2>
+
+                <p>Notes</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-newspaper"></i>
+
+                <h2>{{ blog_count }}</h2>
+
+                <p>Blogs</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h2>{{ message_count }}</h2>
+
+                <p>Message</p>
+
+            </div>
+
+        </section>
+        <!-- =========================
+            CONTENT SECTION
+    ========================== -->
+
+        <div class="dashboard-content">
+
+            <!-- Profile Card -->
+
+            <div class="profile-card">
+
+                <img src="{% static 'image\com er.png' %}" alt="Profile">
+
+                <h2>{{ request.user.first_name|default:request.user.username }}</h2>
+
+                <p>{{ request.user.email }}</p>
+
+                <span>Full Stack Developer</span>
+
+                <a href="#" class="edit-btn">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Edit Profile
+
+                </a>
+
+            </div>
+
+            <!-- Recent Projects -->
+
+            <div class="recent-projects">
+
+                <div class="title">
+
+                    <h2>Recent Projects</h2>
+
+                    <a href="#">View All</a>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Project</th>
+                            <th>Technology</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        {% for project in projects %}
+
+                        <tr>
+
+                            <td>
+                                {{ project.title }}
+                            </td>
+
+
+                            <td>
+                                {{ project.technology }}
+                            </td>
+
+
+                            <td>
+
+                                <span class="active-status">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+                        {% empty %}
+
+
+                        <tr>
+
+                            <td colspan="3">
+                                No Project Found
+                            </td>
+
+                        </tr>
+
+
+                        {% endfor %}
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-grid">
+
+                <a href="#" class="action-card">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>Add Project</span>
+
+                </a>
+
+                <a href="#" class="action-card">
+
+                    <i class="fa-solid fa-blog"></i>
+
+                    <span>Write Blog</span>
+
+                </a>
+
+                <a href="#" class="action-card">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <span>Upload Notes</span>
+
+                </a>
+
+                <a href="#" class="action-card">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+
+                © 2026 Rabindra Portfolio Dashboard.
+                All Rights Reserved.
+
+            </p>
+
+        </footer>
+
+    </div>
+    <script src="{% static 'js/dashboard.js' %}"></script>
+
+</body>
+
+</html>

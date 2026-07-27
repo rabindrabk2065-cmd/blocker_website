@@ -1,0 +1,407 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabindra BK | Resume</title>
+
+    <link rel="stylesheet" href="{% static 'css/cv.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!--================ NAVBAR ================-->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="{% url 'home' %}" class="logo">
+                Rabindra<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-image">
+                <img src="{% static 'image/ram.jpg' %}" alt="Rabindra BK">
+            </div>
+
+            <div class="hero-text">
+
+                <span>Hello, I'm</span>
+
+                <h1>Rabindra BK</h1>
+
+                <h3>Full Stack Developer</h3>
+
+                <p>
+                    Passionate Computer Engineering student dedicated to building
+                    modern, responsive and scalable web applications using
+                    HTML, CSS, JavaScript, Python and Django.
+                </p>
+
+                <div class="buttons">
+                    {% if cv.resume %}
+
+                    <a href="{{ cv.resume.url }}" class="btn" download>
+
+                        <i class="fa-solid fa-download"></i>
+                        Download Resume
+
+                    </a>
+                    {% else %}
+                    <p>CV not uploaded.</p>
+                    {% endif %}
+
+                    <a href="{% url 'home' %}" class="btn outline">
+
+                        <i class="fa-solid fa-house"></i>
+                        Portfolio
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am currently studying Diploma in Computer Engineering and
+            continuously improving my skills in Full Stack Web Development.
+            My goal is to become a professional Full Stack Developer
+            and build modern, secure and user-friendly web applications.
+        </p>
+
+    </section>
+    <!-- ==================== ec=dicatuib  opage-->
+    <!--================ EDUCATION ================-->
+
+    <section class="section" id="education">
+
+        <h2>Education</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="circle"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Diploma in Computer Engineering</h3>
+
+                    <span>2024 - Present</span>
+
+                    <p>
+                        Currently studying Diploma in Computer Engineering and
+                        focusing on Full Stack Development, Python, Django,
+                        Database Management and Modern Web Technologies.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="circle"></div>
+
+                <div class="timeline-content">
+
+                    <h3>+2 Management with Computer Science</h3>
+
+                    <span>Completed</span>
+
+                    <p>
+                        Successfully completed Higher Secondary Education
+                        with Computer Science and Business Studies.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ TECHNICAL SKILLS ================-->
+
+    <section class="section" id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>Django</span>
+            <span>MySQL</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Bootstrap</span>
+            <span>Responsive Design</span>
+
+        </div>
+
+    </section>
+
+    <!--================ PROJECTS ================-->
+
+    <section class="section" id="projects">
+
+        <h2>Featured Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+                    Designed and developed a fully responsive personal portfolio
+                    website using HTML, CSS, JavaScript and Django with a modern UI.
+                </p>
+
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Django</span>
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <i class="fa-solid fa-blog"></i>
+
+                <h3>Blog Management System</h3>
+
+                <p>
+                    A dynamic blog application built with Django featuring
+                    authentication, blog management and responsive design.
+                </p>
+
+                <div class="tech">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>SQLite</span>
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h3>Student Management System</h3>
+
+                <p>
+                    Student record management system with CRUD operations
+                    developed using Django framework.
+                </p>
+
+                <div class="tech">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>Database</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ EXPERIENCE ================-->
+
+    <section class="section">
+
+        <h2>Experience</h2>
+
+        <div class="card">
+
+            <h3>Full Stack Developer (Learning)</h3>
+
+            <span>2025 - Present</span>
+
+            <p style="color:black;">
+                Continuously learning Full Stack Web Development by building
+                real-world projects using HTML, CSS, JavaScript, Python,
+                Django and MySQL. Improving problem-solving skills,
+                responsive web design and backend development.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!--================ CERTIFICATES ================-->
+
+    <section class="section">
+
+        <h2>Certificates</h2>
+
+        <div class="certificates">
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h3>HTML & CSS</h3>
+
+                <p>
+                    Strong understanding of modern HTML5 and CSS3 for responsive
+                    website development.
+                </p>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>Python Programming</h3>
+
+                <p>
+                    Learning Python programming, problem solving and backend
+                    development concepts.
+                </p>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h3>Django Framework</h3>
+
+                <p>
+                    Developing dynamic web applications using Django and database
+                    integration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ CONTACT ================-->
+
+    <section class="section" id="contact">
+
+        <h2>Contact Information</h2>
+
+        <div class="contact">
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>rabindrbk2065@email.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+977-9762754869</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h4>Location</h4>
+                    <p>Surkhet, Nepal</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ SOCIAL ================-->
+
+    <section class="section">
+
+        <h2>Connect With Me</h2>
+
+        <div class="social">
+
+            <a href="#" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="#" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://www.facebook.com/rabindra.bk.99031" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--================ FOOTER ================-->
+
+    <footer class="footer">
+
+        <h2>Rabindra BK</h2>
+
+        <p>
+            Full Stack Developer | Computer Engineering Student
+        </p>
+
+        <p class="copyright">
+            © 2026 Rabindra BK. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

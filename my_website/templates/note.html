@@ -1,0 +1,513 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Engineering Notes | Rabindra BK</title>
+
+    <link rel="stylesheet" href="{% static 'css/note.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!--================ NAVBAR START ================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="{% url 'home' %}">
+
+                    Rabindra<span>.</span>
+
+                </a>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="{% url 'home' %}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#about">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#projects">
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'note' %}" class="active">
+
+                        Notes
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'blog' %}">
+
+                        Blog
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!--<a href="{% url 'home' %}#contact" class="btn">
+
+                Hire Me
+
+            </a>-->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--================ NAVBAR END ================-->
+
+    <!--================ HERO START ================-->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <span>
+
+                Engineering Learning Portal
+
+            </span>
+
+            <h1>
+
+                Engineering Notes
+
+            </h1>
+
+            <p>
+
+                Download complete Diploma Engineering Notes,
+                PDF Files, Old Questions,
+                Lab Reports and Practical Files.
+
+            </p>
+
+            <a href="#category" class="hero-btn">
+
+                Explore Notes
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--================ HERO END ================-->
+    <!--================ CATEGORY START ================-->
+
+    <section class="category" id="category">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Choose Department</span>
+
+                <h2>Engineering Categories</h2>
+
+                <p>
+                    Select your engineering faculty to access semester-wise
+                    notes, practical files, old questions and study materials.
+                </p>
+
+            </div>
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input type="text" id="searchInput" placeholder="Search subject or semester...">
+
+                <button>
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Categories -->
+
+            <div class="category-grid">
+
+                <!-- Computer -->
+
+                <div class="category-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-computer"></i>
+
+                    </div>
+
+                    <h3>Computer Engineering</h3>
+
+                    <p>
+
+                        Complete Semester Notes,
+                        PDF, Lab Report,
+                        Old Questions and Projects.
+
+                    </p>
+
+                    <a href="{% url 'explore' %}">
+
+                        Explore
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- Civil -->
+
+                <div class="category-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-building"></i>
+
+                    </div>
+
+                    <h3>Civil Engineering</h3>
+
+                    <p>
+
+                        Semester Notes,
+                        Drawing Files,
+                        Survey Reports
+                        and Manuals.
+
+                    </p>
+
+                    <a href="{% url 'explore' %}">
+
+                        explore
+
+                    </a>
+
+                </div>
+
+                <!-- Electrical -->
+
+                <div class="category-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <h3>Electrical Engineering</h3>
+
+                    <p>
+
+                        Electrical Machines,
+                        Wiring,
+                        Power System
+                        and Lab Reports.
+
+                    </p>
+
+                    <a href="#">
+
+                        Coming Soon
+
+                    </a>
+
+                </div>
+
+                <!-- Electronics -->
+
+                <div class="category-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                    </div>
+
+                    <h3>Electronics Engineering</h3>
+
+                    <p>
+
+                        Digital Electronics,
+                        Embedded System,
+                        Arduino Notes.
+
+                    </p>
+
+                    <a href="#">
+
+                        Coming Soon
+
+                    </a>
+
+                </div>
+
+                <!-- Mechanical -->
+
+                <div class="category-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+                    <h3>Mechanical Engineering</h3>
+
+                    <p>
+
+                        Workshop,
+                        Thermodynamics,
+                        Machine Design
+                        and Practical Files.
+
+                    </p>
+
+                    <a href="#">
+
+                        Coming Soon
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ CATEGORY END ================-->
+
+    <!--==============================
+        LATEST NOTES
+================================-->
+
+    <section class="latest-notes">
+
+        <div class="latest-container">
+
+            <div class="section-title">
+
+                <span>Study Material</span>
+
+                <h2>Latest Notes</h2>
+
+                <p>
+
+                    Download the latest semester notes,
+                    lab reports, practical files and PDFs.
+
+                </p>
+
+            </div>
+
+            <div class="notes-grid">
+
+                <!-- Card 1 -->
+
+                <div class="note-card">
+
+                    <div class="note-image">
+
+                        <img src="{% static 'images/c.jpg' %}" alt="">
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span>C Programming</span>
+
+                        <h3>Programming in C</h3>
+
+                        <p>
+
+                            Complete handwritten notes,
+                            examples and important questions.
+
+                        </p>
+
+                        <div class="note-btn">
+
+                            <a href="#" class="view-btn">
+
+                                View PDF
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                Download
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="note-card">
+
+                    <div class="note-image">
+
+                        <img src="{% static 'images/python.jpg' %}" alt="">
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span>Python</span>
+
+                        <h3>Python Notes</h3>
+
+                        <p>
+
+                            Python complete notes with practical
+                            examples.
+
+                        </p>
+
+                        <div class="note-btn">
+
+                            <a href="#" class="view-btn">
+
+                                View PDF
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                Download
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="note-card">
+
+                    <div class="note-image">
+
+                        <img src="{% static 'images/django.jpg' %}" alt="">
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span>Django</span>
+
+                        <h3>Django Framework</h3>
+
+                        <p>
+
+                            Learn Django from beginner
+                            to advanced level.
+
+                        </p>
+
+                        <div class="note-btn">
+
+                            <a href="#" class="view-btn">
+
+                                View PDF
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                Download
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- js lai link gareko ho yo code-->
+    <script src="{% static 'js/note.js' %}"></script>

@@ -1,0 +1,1127 @@
+/*==============================
+        GOOGLE FONT
+===============================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*==============================
+        NAVBAR
+===============================*/
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, .85);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #38bdf8;
+}
+
+.btn {
+    padding: 12px 28px;
+    background: #38bdf8;
+    color: #fff;
+    border-radius: 50px;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #38bdf8;
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*=========================
+        MENU ICON
+=========================*/
+
+.menu-btn {
+
+    display: none;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+/*=========================
+      MOBILE MENU
+=========================*/
+
+@media(max-width:992px) {
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+    .navbar .btn {
+
+        display: none;
+
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 80px;
+
+        left: -100%;
+
+        width: 100%;
+
+        height: calc(100vh - 80px);
+
+        background: #0f172a;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        padding-top: 60px;
+
+        gap: 35px;
+
+        transition: .4s;
+
+    }
+
+    .nav-links.active {
+
+        left: 0;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .logo a {
+
+        font-size: 28px;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .navbar {
+
+        width: 92%;
+
+    }
+
+    .logo a {
+
+        font-size: 24px;
+
+    }
+
+}
+
+/* ======== nav links ko lagi ho yo */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*======================================
+        GOOGLE FONT
+======================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*======================================
+            RESET
+======================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #020617;
+    color: #fff;
+    overflow-x: hidden;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/*======================================
+        SEMESTER SECTION
+======================================*/
+
+.semester-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 100px 8%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top left, #1d4ed833, transparent 35%),
+        radial-gradient(circle at bottom right, #38bdf822, transparent 30%),
+        #020617;
+
+}
+
+.semester-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(56, 189, 248, .05);
+
+    top: -180px;
+    left: -180px;
+
+}
+
+.semester-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .05);
+
+    right: -150px;
+    bottom: -150px;
+
+}
+
+.container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*======================================
+        SECTION TITLE
+======================================*/
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.section-title span {
+
+    display: inline-block;
+
+    color: #38bdf8;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+.section-title h2 {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    color: #fff;
+
+}
+
+.section-title p {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: #94a3b8;
+
+}
+
+/*======================================
+        GRID
+======================================*/
+
+.semester-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 35px;
+
+}
+
+/*======================================
+        CARD
+======================================*/
+
+.semester-card {
+
+    position: relative;
+
+    background: rgba(30, 41, 59, .75);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    transition: .45s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .35);
+
+}
+
+.semester-card:hover {
+
+    transform: translateY(-15px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 20px 50px rgba(56, 189, 248, .25);
+
+}
+
+/*======================================
+        TOP BORDER
+======================================*/
+
+.semester-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+
+}
+
+/*======================================
+        GLOW EFFECT
+======================================*/
+
+.semester-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(56, 189, 248, .08);
+
+    right: -90px;
+
+    top: -90px;
+
+    transition: .5s;
+
+}
+
+.semester-card:hover::after {
+
+    transform: scale(1.5);
+
+}
+
+/*======================================
+        NUMBER
+======================================*/
+
+.semester-number {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #fff;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+
+        0 12px 30px rgba(37, 99, 235, .35);
+
+    transition: .5s;
+
+}
+
+.semester-card:hover .semester-number {
+
+    transform: rotate(360deg) scale(1.1);
+
+}
+
+/*======================================
+        TITLE
+======================================*/
+
+.semester-card h3 {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+
+}
+
+/*======================================
+        DESCRIPTION
+======================================*/
+
+.semester-card p {
+
+    color: #cbd5e1;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+
+/*======================================
+        SEMESTER INFO
+======================================*/
+
+.semester-info {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 25px 0;
+
+    gap: 10px;
+
+}
+
+.semester-info span {
+
+    background: rgba(56, 189, 248, .12);
+
+    color: #38bdf8;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border: 1px solid rgba(56, 189, 248, .25);
+
+    transition: .3s;
+
+}
+
+.semester-info span:hover {
+
+    background: #38bdf8;
+
+    color: #fff;
+
+}
+
+/*======================================
+        BUTTON
+======================================*/
+
+.semester-btn {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+
+    color: #fff;
+
+    font-weight: 600;
+
+    overflow: hidden;
+
+    transition: .4s;
+
+    box-shadow: 0 10px 25px rgba(37, 99, 235, .30);
+
+}
+
+.semester-btn:hover {
+
+    transform: translateY(-3px);
+
+    gap: 18px;
+
+    box-shadow: 0 15px 35px rgba(56, 189, 248, .40);
+
+}
+
+.semester-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: -100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transition: .6s;
+
+}
+
+.semester-btn:hover::before {
+
+    left: 100%;
+
+}
+
+/*======================================
+        CARD SHINE
+======================================*/
+
+.semester-card:hover {
+
+    background: rgba(30, 41, 59, .92);
+
+}
+
+/*======================================
+        FLOAT ANIMATION
+======================================*/
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-6px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+.semester-number {
+
+    animation: floating 3s ease-in-out infinite;
+
+}
+
+/*======================================
+        FADE ANIMATION
+======================================*/
+
+@keyframes fadeUp {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.semester-card {
+
+    animation: fadeUp .8s ease;
+
+}
+
+/*======================================
+        SCROLLBAR
+======================================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #020617;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #38bdf8;
+
+}
+
+/*======================================
+        RESPONSIVE
+======================================*/
+
+@media(max-width:992px) {
+
+    .semester-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .section-title h2 {
+
+        font-size: 38px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .semester-section {
+
+        padding: 80px 6%;
+
+    }
+
+    .section-title {
+
+        margin-bottom: 50px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 32px;
+
+    }
+
+    .section-title p {
+
+        font-size: 15px;
+
+    }
+
+    .semester-card {
+
+        padding: 28px;
+
+    }
+
+    .semester-number {
+
+        width: 75px;
+        height: 75px;
+
+        font-size: 25px;
+
+    }
+
+    .semester-card h3 {
+
+        font-size: 22px;
+
+    }
+
+    .semester-card p {
+
+        font-size: 15px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .semester-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 28px;
+
+    }
+
+    .section-title span {
+
+        font-size: 13px;
+
+    }
+
+    .semester-btn {
+
+        padding: 14px;
+
+        font-size: 15px;
+
+    }
+
+}
+
+/*======================================
+        HOVER ICON
+======================================*/
+
+.semester-btn i {
+
+    transition: .3s;
+
+}
+
+.semester-btn:hover i {
+
+    transform: translateX(8px);
+
+}
+
+/*======================================
+        END
+======================================*/
+/* Flip Card */
+/* =====================================
+   FLIP CARD
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.semester-card {
+
+    perspective: 1000px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    width: 100%;
+    height: auto;
+
+}
+
+.card-inner {
+
+    position: relative;
+    width: 100%;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+    min-height: 420px;
+}
+
+.semester-card:hover .card-inner {
+
+    transform: rotateY(180deg);
+
+}
+
+/* =============================
+   FRONT & BACK
+============================= */
+
+.card-front,
+.card-back {
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    background: rgba(30, 41, 59, .95);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    overflow: hidden;
+    min-height: 420px;
+    height: auto;
+
+
+}
+
+.card-back {
+
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* =============================
+   HEADING
+============================= */
+
+.card-back h3 {
+
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 20px;
+    font-size: 24px;
+
+}
+
+/* =============================
+   SUBJECT LIST
+============================= */
+
+.card-back ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    flex: 1;
+
+    overflow-y: auto;
+
+}
+
+/* Scroll Bar */
+
+.card-back ul::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+.card-back ul::-webkit-scrollbar-thumb {
+
+    background: #38bdf8;
+    border-radius: 20px;
+
+}
+
+.card-back ul::-webkit-scrollbar-track {
+
+    background: rgba(255, 255, 255, .05);
+
+}
+
+.card-back ul li {
+
+    margin-bottom: 10px;
+
+}
+
+.card-back ul li:last-child {
+
+    margin-bottom: 0;
+
+}
+
+/* =============================
+   LINK DESIGN
+============================= */
+
+.card-back ul li a {
+
+    display: block;
+
+    padding: 12px 15px;
+
+    background: rgba(255, 255, 255, .05);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #38bdf8;
+
+    transition: .3s ease;
+
+}
+
+.card-back ul li a:hover {
+
+    background: #38bdf8;
+
+    color: #020617;
+
+    transform: translateX(8px);
+
+    box-shadow: 0 8px 20px rgba(56, 189, 248, .35);
+
+}
+
+/* =============================
+   FRONT CONTENT
+============================= */
+
+.card-front {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.card-front img {
+
+    width: 90px;
+    margin-bottom: 20px;
+
+}
+
+.card-front h2 {
+
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+.card-front p {
+
+    color: #cbd5e1;
+    line-height: 1.6;
+
+}
+
+/* additional css ho yo */
+.semester-card {
+    height: 500px;
+}
+
+.card-inner {
+    height: 100%;
+}
+
+.card-front,
+.card-back {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-back ul {
+    flex: 1;
+    overflow-y: auto;
+}
