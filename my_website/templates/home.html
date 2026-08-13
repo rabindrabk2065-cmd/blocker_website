@@ -54,7 +54,7 @@
 
             </ul>
 
-            <a href="{% url 'home' %}#contact" class="btn" id="Home" class="active">Hire Me</a>
+            <a href="{% url 'home' %}#contact" class="btn" id="Home" class="active">Here Me</a>
 
             <div class="menu-btn">
 
@@ -231,7 +231,12 @@
         {% for project in projects %}
         <div class="project-card">
 
+            {% if project.image %}
             <img src="{{ project.image.url }}" alt="{{ project.title }}">
+            {% else %}
+            <p align="center">No image available</p>
+            {% endif %}
+
 
             <div class="project-content">
 

@@ -13,7 +13,7 @@ class Project(models.Model):
 
     title = models.CharField(max_length=100)
 
-    image = models.ImageField(upload_to="projects/")
+    image = models.ImageField(upload_to="projects/",blank=True)
 
     description = models.TextField()
 
@@ -22,14 +22,14 @@ class Project(models.Model):
     demo = models.URLField(blank=True)
     
     database = models.CharField(max_length=10,blank=True)
-    backendtools = models.CharField(max_length=20,blank=True)
+    backendtools = models.CharField(max_length=20)
     html = models.CharField(max_length=10,blank=True)
     css = models.CharField(max_length=10,blank=True)
     js = models.CharField(max_length=10,blank=True)
 
-
     def __str__(self):
         return self.title
+    
 class Webnote(models.Model):
     title = models.CharField(max_length=20,blank=True)
     pdf = models.FileField(upload_to='notes/')
