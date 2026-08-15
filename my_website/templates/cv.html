@@ -15,28 +15,26 @@
 <body>
     <!--================ NAVBAR ================-->
 
-    <header class="header">
+    <nav class="navbar">
 
-        <nav class="navbar">
+        <a href="{% url 'home' %}" class="logo">
+            Rabindra<span>.</span>
+        </a>
 
-            <a href="{% url 'home' %}" class="logo">
-                Rabindra<span>.</span>
-            </a>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Call Me</a></li>
+        </ul>
 
-            <ul class="nav-links">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-            </ul>
-
-        </nav>
-
-    </header>
-
+    </nav>
     <!-- ================= HERO ================= -->
 
     <section class="hero">
@@ -401,6 +399,7 @@
         </p>
 
     </footer>
+    <script src="{% static 'js/cv.js' %}"></script>
 
 </body>
 

@@ -7,6 +7,7 @@ from .models import Project
 from .models import Webnote
 from .models import Blog
 from .models import CV
+from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
@@ -116,6 +117,39 @@ def logout_view(request):
     logout(request)
     return redirect("login")
 
+def register_view(request):
+
+    if request.method == "POST":
+
+        username = request.POST.get("username")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        confirm_password = request.POST.get("confirm_password")
+
+        if password != confirm_password:
+            return render(request, "register.html", {
+                "error": "Passwords do not match"
+            })
+
+        if User.objects.filter(username=username).exists():
+            return render(request, "register.html", {
+                "error": "Username already exists"
+            })
+
+        if User.objects.filter(email=email).exists():
+            return render(request, "register.html", {
+                "error": "Email already exists"
+            })
+
+        User.objects.create_user(
+            username=username,
+            email=email,
+            password=password
+        )
+
+        return redirect("login")
+
+    return render(request, "register.html")
 def cv(request):
     cv = CV.objects.first()
 
