@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Engineering Mathematics III</title>
+    <title>Engineering Mathematics I</title>
 
     <link rel="stylesheet" href="{% static 'css/math.css' %}">
 
@@ -17,6 +17,104 @@
 </head>
 
 <body>
+
+    <!--================ NAVBAR START ================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="{% url 'home' %}">
+
+                    Rabindra<span>.</span>
+
+                </a>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="{% url 'home' %}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#about">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#projects">
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'note' %}" class="active">
+
+                        Notes
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#news">
+
+                        News
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="{% url 'home' %}#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!--<a href="{% url 'home' %}#contact" class="btn">
+
+                Hire Me
+
+            </a>-->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--================ NAVBAR END ================-->
 
     <!--==============================
             HERO SECTION
@@ -31,7 +129,7 @@
             </span>
 
             <h1>
-                Engineering Mathematics III
+                Engineering Mathematics I
             </h1>
 
             <p>
@@ -51,6 +149,122 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
 
                 </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    {% for note in notes %}
+
+    <div class="note-card">
+
+        <div class="note-icon">
+            <i class="fa-solid fa-file-pdf"></i>
+        </div>
+
+        <div class="note-content">
+
+            <h3>{{ note.title }}</h3>
+
+            <p>{{ note.pdf.name }}</p>
+
+            <div class="note-info">
+
+                <span>
+                    <i class="fa-solid fa-calendar"></i>
+                    {{ note.created_at|date:"M d, Y" }}
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-file"></i>
+                    pdf
+                </span>
+
+            </div>
+
+            <div class="note-buttons">
+
+                <a href="{{ note.pdf.url }}" target="_blank" class="view-btn">
+                    <i class="fa-solid fa-eye"></i>
+                    View
+                </a>
+
+                <a href="{{ note.pdf.url }}" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                    Download
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+    <!--======================================
+        FILTER SECTION
+=======================================-->
+
+    <section class="filter-section">
+
+        <div class="filter-top">
+
+            <div class="filter-buttons">
+
+                <button class="active">All</button>
+
+                <button>Notes</button>
+
+                <button>PDF</button>
+
+                <button>Practical</button>
+
+                <button>Old Questions</button>
+
+            </div>
+
+            <div class="search-area">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" placeholder="Search Chapter...">
+
+            </div>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <h3>25+</h3>
+
+                <p>PDF Notes</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>15+</h3>
+
+                <p>Old Questions</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>10+</h3>
+
+                <p>Practical Files</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>100%</h3>
+
+                <p>Free Access</p>
 
             </div>
 

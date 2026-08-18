@@ -258,11 +258,16 @@
             </div>
 
             <div class="profile-box">
+                <a href="{% url 'edit_profile' %}">
 
-                <img src="{% static 'image\rann.jpg' %}" alt="Profile">
+                    {% if profile.photo %}
+                    <img src="{{ profile.photo.url }}" alt="Profile">
+                    {% else %}
+                    <span>👤</span>
+                    {% endif %}
 
+                </a>
             </div>
-
         </div>
 
         <!-- HERO CARD -->
@@ -345,7 +350,7 @@
 
             <div class="profile-card">
 
-                <img src="{% static 'image\com er.png' %}" alt="Profile">
+                <img src="#" alt="Profile">
 
                 <h2>{{ request.user.first_name|default:request.user.username }}</h2>
 
@@ -448,7 +453,7 @@
 
             <div class="action-grid">
 
-                <a href="#" class="action-card">
+                <a href="{% url 'add_project' %}" class="action-card">
 
                     <i class="fa-solid fa-plus"></i>
 
